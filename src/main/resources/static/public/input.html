@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Input tag</title>
+<!--    &lt;!&ndash;/* Used only for editing in Pinegrow &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">-->
+    <!--*/-->
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="container" role="alert">
+        <p>Here only a input</p>
+    </div>
+    <div class="container">
+        <form hx-post="/public/input" hx-target="this" hx-swap="outerHTML">
+            <div>
+                <label>Just some input</label> :
+                <span th:text="${value}"></span>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/htmx.org@1.8.3" integrity="sha384-e2no7T1BxIs3ngCTptBu4TjvRWF4bBjFW0pt7TpxOEkRJuvrjRt29znnYuoLTz9S" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <button hx-post="/clicked"
+            hx-trigger="click"
+            hx-target="#parent-div"
+            hx-swap="innerHTML"
+    > Click Me!
+    </button>
+
+    <!--
+    hx-swap
+            value       meaning
+            innerHTML   the default, puts the content inside the target element
+            outerHTML   replaces the entire target element with the returned content
+            afterbegin  prepends the content before the first child inside the target
+            beforebegin prepends the content before the target in the targets parent element
+            beforeend   appends the content after the last child inside the target
+            afterend    appends the content after the target in the targets parent element
+            none        does not append content from response (Out of Band Swaps and Response Headers will still be processed)
+    -->
+
+<p>simon</p>
+    <div id="parent-div">Result</div>
+</body>
+</html>
+
+
